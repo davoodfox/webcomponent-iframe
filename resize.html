@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>web component vs iframe</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .iframe {
+        border: 1px solid black;
+        resize: both;
+        overflow: scroll;
+        background-color: #999;
+        margin: 20px;
+      }
+      .component {
+        border: 1px solid black;
+        resize: both;
+        overflow: scroll;
+        background-color: #999;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="compare.html">Compare</a>
+    <a href="resize.html">Compare (resize)</a>
+    <a href="component.html">Web Component</a>
+    <a href="iframe.html">IFrame</a>
+
+    <div class="iframe">
+      <h2>iframe</h2>
+      <iframe
+        src="./page.html"
+        width="100%"
+        height="100%"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
+    </div>
+
+    <div class="component">
+      <h2>web component</h2>
+      <my-component></my-component>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
